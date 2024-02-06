@@ -1,0 +1,16 @@
+<div class="max-w-7xl mx-auto my-12 px-8">
+    <div class="grid grid-col-1 md:grid-cols-3 gap-12">
+    {{ collection:avtodomi }}
+        <!--Card 1-->
+        <a href="{{ url }}" class="rounded overflow-hidden shadow-lg hover:scale-110 transition-all duration-300 bg-gray-100">
+            {{ responsive:main_photo ratio="16/9" }}
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">{{ title }}</div>
+              <p class="text-gray-700 text-base">
+                {{ intro }}
+              </p>
+            </div>
+        </a>
+    {{ /collection:avtodomi }}
+    </div>
+</div>

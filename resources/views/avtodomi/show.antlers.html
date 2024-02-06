@@ -1,0 +1,143 @@
+<div class="max-w-7xl mx-auto my-12 px-8">
+    {{ responsive:main_photo ratio="16/9" class="rounded-md" }}
+    <h1 class="font-bold text-4xl text-sky-900 my-8">{{title}}</h1>
+    <div class="w-full md:w-2/3 text-lg">
+        {{ intro }}
+    </div>
+    <div class="grid grid-cols-2 gap-12 my-12">
+        <div>
+            <h2 class="font-bold text-3xl text-sky-900 my-8">Zunanjost</h2>
+            {{ zunanjost }}
+        </div>
+        <div>
+            <h2 class="font-bold text-3xl text-sky-900 my-8">Notranjost</h2>
+            {{ notranjost }}
+        </div>
+    </div>
+
+    <ul class="bg-gray-100 nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4" id="tabs-tab"
+    role="tablist">
+        <li class="nav-item" role="presentation">
+        <a href="#tabs-home" class="
+            nav-link
+            block
+            font-medium
+            text-xs
+            leading-tight
+            uppercase
+            border-x-0 border-t-0 border-b-2 border-transparent
+            px-6
+            py-3
+            pt-4
+            my-0
+            hover:border-transparent hover:bg-gray-200
+            focus:border-transparent
+            active
+        " id="tabs-home-tab" data-bs-toggle="pill" data-bs-target="#tabs-desc" role="tab" aria-controls="tabs-desc"
+        aria-selected="true">Opis avtodoma</a>
+        </li>
+        <li class="nav-item" role="presentation">
+        <a href="#tabs-profile" class="
+            nav-link
+            block
+            font-medium
+            text-xs
+            leading-tight
+            uppercase
+            border-x-0 border-t-0 border-b-2 border-transparent
+            px-6
+            py-3
+            pt-4
+            my-0
+            hover:border-transparent hover:bg-gray-200
+            focus:border-transparent
+        " id="tabs-profile-tab" data-bs-toggle="pill" data-bs-target="#tabs-tech" role="tab"
+            aria-controls="tabs-tech" aria-selected="false">Tehnični  podatki</a>
+        </li>
+        <li class="nav-item" role="presentation">
+        <a href="#tabs-messages" class="
+            nav-link
+            block
+            font-medium
+            text-xs
+            leading-tight
+            uppercase
+            border-x-0 border-t-0 border-b-2 border-transparent
+            px-6
+            py-3
+            pt-4
+            my-0
+            hover:border-transparent hover:bg-gray-200
+            focus:border-transparent
+        " id="tabs-messages-tab" data-bs-toggle="pill" data-bs-target="#tabs-photo" role="tab"
+            aria-controls="tabs-photo" aria-selected="false">Fotogalerija</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a href="#tabs-messages" class="
+            nav-link
+            block
+            font-medium
+            text-xs
+            leading-tight
+            uppercase
+            border-x-0 border-t-0 border-b-2 border-transparent
+            px-6
+            py-3
+            pt-4
+            my-0
+            hover:border-transparent hover:bg-gray-200
+            focus:border-transparent
+            " id="tabs-messages-tab" data-bs-toggle="pill" data-bs-target="#tabs-price" role="tab"
+            aria-controls="tabs-price" aria-selected="false">Cenik</a>
+        </li>
+        <!-- <li class="nav-item" role="presentation">
+            <a href="#tabs-messages" class="
+            nav-link
+            block
+            font-medium
+            text-xs
+            leading-tight
+            uppercase
+            border-x-0 border-t-0 border-b-2 border-transparent
+            px-6
+            py-3
+            pt-4
+            my-0
+            hover:border-transparent hover:bg-gray-200
+            focus:border-transparent
+            " id="tabs-messages-tab" data-bs-toggle="pill" data-bs-target="#tabs-calendar" role="tab"
+            aria-controls="tabs-calendar" aria-selected="false">Koledar zasedenosti</a>
+        </li> -->
+
+    </ul>
+    <div class="tab-content mt-8 " id="tabs-tabContent">
+        <div class="tab-pane fade show active" id="tabs-desc" role="tabpanel" aria-labelledby="tabs-desc-tab">
+            {{ opis_avtodoma }}
+        </div>
+        <div class="tab-pane fade" id="tabs-tech" role="tabpanel" aria-labelledby="tabs-tech-tab">
+            {{ tehnicni_podatki }}
+        </div>
+        <div class="tab-pane fade" id="tabs-photo" role="tabpanel" aria-labelledby="tabs-photo-tab">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-2">
+                {{ galerija }}
+
+                <div>{{ responsive:url ratio="16/9" class="glightbox rounded-md" data-gallery="gallery" data-glightbox="" }}</div>
+
+                {{ /galerija }}
+            </div>
+        </div>
+        <div class="tab-pane fade" id="tabs-price" role="tabpanel" aria-labelledby="tabs-price-tab">
+            {{ cenik }}
+        </div>
+        <div class="tab-pane fade" id="tabs-calendar" role="tabpanel" aria-labelledby="tabs-calendar-tab">
+            Koledar zasedenosti
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script type="text/javascript">
+  const lightbox = GLightbox({
+    loop: true,
+  });
+</script>

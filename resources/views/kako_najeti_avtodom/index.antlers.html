@@ -1,0 +1,21 @@
+<div class="max-w-7xl mx-auto px-8 py-24 text-center">
+
+    <h2 class="text-lg font-Cabin uppercase mb-4">Kratek vodič do vašega avtodoma</h2>
+    <h3 class="text-5xl font-bold font-Cabin mb-8">Kako najeti <b class="text-sky-700">avtodom</b>?</h3>
+
+    <div class="content">
+        {{ collection:kako_najeti_avtodom }}
+
+        <div class="my-12">
+            <h2>{{ title }}</h2>
+            {{ content }}
+            <br>
+            {{ if last }}
+            <a class="font-bold text-xl bg-sky-700 text-white rounded-md hover:bg-cyan-600 py-2 px-4 transition-colors duration-200 my-4" href="{{ url }}">Preberi več</a>
+            {{ /if }}
+        </div>
+
+        {{ /collection:kako_najeti_avtodom }}
+    </div>
+
+</div>

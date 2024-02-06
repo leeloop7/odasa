@@ -1,0 +1,48 @@
+<nav id="header"
+class="w-full z-50 top-0 bg-sky-900 sticky">
+    <div class="w-full max-w-7xl mx-auto flex flex-wrap items-center justify-between py-4 px-8">
+        <label for="menu-toggle"
+            class="cursor-pointer md:hidden block">
+            <svg class="fill-current text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20">
+            <title>menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+        </label>
+        <input class="hidden"
+            type="checkbox"
+            id="menu-toggle" />
+
+        <div class="order-1 md:order-1">
+            <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
+                href="{{ site:url }}">
+                <img src="/img/odasa-logo.png" class="h-12" alt="">
+            </a>
+        </div>
+
+        <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1"
+            id="menu">
+            <nav class="tk-aaux-next">
+                <ul class="md:flex items-center justify-between text-white text-sm pt-4 md:pt-0 relative">
+                    {{ nav:collection:pages }}
+                    <a class="no-underline border-b-2 border-transparent hover:border-b-2 hover:border-sky-300 mr-2 font-bold uppercase {{ if is_current }}border-b-2 text-sky-500 border-sky-500 hover:border-sky-300 {{ /if }} hover:text-sky-500 pt-3 pb-2 px-4" href="{{ url }}">
+                        <li class="">
+                            {{ title }}
+                        </li>
+                    </a>
+                    {{ /nav:collection:pages }}
+                </ul>
+            </nav>
+        </div>
+        <div class="order-3">
+            {{ locales self="false" }}
+                <a href="{{ permalink }}" class="">
+                   <img src="/img/{{ locale:name }}.svg" class="h-6 w-6 rounded-md">
+                </a>
+              {{ /locales }}
+        </div>
+    </div>
+</nav>
